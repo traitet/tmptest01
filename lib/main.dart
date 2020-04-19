@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // 8) ADD SIGNUP PAGE (DONE)
     // 9) ADD BODY IN STACK (done) - short time 39:35m
     // 10) ADD SEARCH PAGE (LATER)
-    // 12) REGISTER GITHUB (1) REGISTER (2) CREATE NEW REPO (3) GIT INIT (4) COMMIT (5) PUSH
+    // 12) REGISTER GITHUB (1) REGISTER (2) CREATE NEW REPO (3) GIT INIT (4) COMMIT (5) PUSH  ** total 3min** URL: https://github.com/traitet/tmptest01.git (44.55)
     //=======================================================
             RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => MenuPage()),);}, child: Text('Menu Page'),),
             RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => LayoutPage()),);}, child: Text('Layout Page'),),
