@@ -1,0 +1,142 @@
+import 'package:flutter/material.dart';
+import 'package:tmptest01/screens/LayoutPage.dart';
+import 'package:tmptest01/screens/MenuPage.dart';
+import 'package:tmptest01/screens/SearchPage.dart';
+import 'package:tmptest01/screens/SignupPage.dart';
+import 'package:tmptest01/screens/StackPage.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with "flutter run". You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // "hot reload" (press "r" in the console where you ran "flutter run",
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
+        primarySwatch: Colors.blue,
+        // This makes the visual density adapt to the platform that you run
+        // the app on. For desktop platforms, the controls will be smaller and
+        // closer together (more dense) than on mobile platforms.
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page 2020. Start'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  // This widget is the home page of your application. It is stateful, meaning
+  // that it has a State object (defined below) that contains fields that affect
+  // how it looks.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the State. Fields in a Widget subclass are
+  // always marked "final".
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
+    return Scaffold(
+      appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: Column(
+          // Column is also a layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Invoke "debug painting" (press "p" in the console, choose the
+          // "Toggle Debug Paint" action from the Flutter Inspector in Android
+          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+          // to see the wireframe for each widget.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+    //=======================================================
+    // STEP
+    // 1) CREATE FOLDER (DONE) + CREATE ASSETS\IMAGES FOLDER FOR KEEP IMAGES (DONE
+    // 2) CONFIG YAML FILE (1) REF TO IMAGE FOLDER (DONE)
+    // 3) CREATE NAVIGATION (1) BUTTON for (MENU, LAYOUT, STACK,SEARCH, SIGNUP PAGE)
+    // 4) CREATE DART FILE: (MENU, LAYOUT, STACK,SEARCH, SIGNUP PAGE) (DONE)
+    // 5) CREATE SIDE MENU (NAVDRAWER) (1) CREATE DART FILE IN WIDGET"NAV DRAWER" (2) ADD PICTURE IN ASSET/IMAGE (3) ADD DRAWER IN MENU PAGE (DONE) BEFORE ERROT COZ CANNOT FILE IMAGE 
+    // 6) CREATE CARD MENU IN MENU PAGE (1) CREATE DART FILE IN WIDGET "CARD MENU" (2) ADD IN MENU PAGE (BODY) (DONE: 22.56MIN)
+    // 7) ADD DATA IN LAYOUT PAGE (DONE) 
+    // 8) ADD SIGNUP PAGE (DONE)
+    // 9) ADD BODY IN STACK (done) - short time 39:35m
+    // 10) ADD SEARCH PAGE (LATER)
+    // 12) REGISTER GITHUB (1) REGISTER (2) CREATE NEW REPO (3) GIT INIT (4) COMMIT (5) PUSH
+    //=======================================================
+            RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => MenuPage()),);}, child: Text('Menu Page'),),
+            RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => LayoutPage()),);}, child: Text('Layout Page'),),
+            RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => StackPage()),);}, child: Text('Stack Page'),),
+            RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage()),);}, child: Text('Search Page'),), 
+            RaisedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage()),);}, child: Text('Signup Page'),),                                               
+
+            Text(
+              'You have pushed the button this many times: OK START LESSON 1',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
