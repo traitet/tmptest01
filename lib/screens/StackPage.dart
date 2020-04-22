@@ -10,7 +10,7 @@ class _StackPageState extends State<StackPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Stack Page'),),
-  body:SafeArea(
+      body:SafeArea(
         //============================================================================
         // STACK ( OR COLUMN, ROW) --> STACK = OVERLAY (ซ้อนกัน)
         //============================================================================        
